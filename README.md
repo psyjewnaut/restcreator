@@ -55,8 +55,8 @@ import dev.psyjewnaut.restcreator.models.RestResponse;
 public class BrandController extends BrandBaseController {
 
     @GetMapping("/load")
-    public class loadBrand(HttpServlerRequest request, String name){
-        return new RestResponse.ok(request).body(brandBaseService.getByName(name))
+    public class loadBrand(HttpServlerRequest request, @RequestParam String id){
+        return new RestResponse.ok(request).body(brandBaseService.getById(id))
     }
     //...
 }
@@ -68,6 +68,9 @@ public class BrandController extends BrandBaseController {
 <br>
 ![SwaggerUI](RestCreatorAPI.jpg "Swagger")
 
+## Возможные конфликты
+Библиотека использует стандартные бины Jakson и Hibernate, включая официальные модули Hibernate со стандартной настройкой, поставляемые автоконфигурацией Spring Boot.<br>
+При глобальном переопределении логики сериализации Jakson и ленивой инициализации Hibernate в вашем приложении, необходимо учитывать возможные конфликты.
 
 ## License
 На данный момент не распространяется публично.<br>
