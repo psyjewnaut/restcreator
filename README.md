@@ -68,9 +68,10 @@ public class BrandController extends BrandBaseController {
 <br>
 ![SwaggerUI](RestCreatorAPI.jpg "Swagger")
 
-## Возможные конфликты
-Библиотека использует стандартные бины Jakson и Hibernate, включая официальные модули Hibernate со стандартной настройкой, поставляемые автоконфигурацией Spring Boot.<br>
-При глобальном переопределении логики сериализации Jakson и ленивой инициализации Hibernate в вашем приложении, необходимо учитывать возможные конфликты.
+## Совместимость
+- RestCreator использует стандартные бины Jakson и Hibernate, включая официальные модули Hibernate со стандартной настройкой, поставляемые автоконфигурацией Spring Boot.<br>
+При глобальном переопределении логики сериализации Jakson и ленивой инициализации Hibernate в вашем приложении, необходимо учитывать возможные конфликты.<br>
+- RestCreator хорошо совместим с Spring Security и Keycloak, а также адаптером [Keycloak Spring Adapter](https://github.com/psyjewnaut/keycloak-spring-adapter).
 
 ## License
 На данный момент не распространяется публично.<br>
